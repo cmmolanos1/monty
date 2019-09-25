@@ -43,6 +43,36 @@ void pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
+ * check_digit_push - checks if data is an integer
+ * @tokens: a token
+ * @line_number: the number of lines
+ * Return: 0 if true, 1 if was converted
+ */
+
+int check_digit_push(char *tokens, unsigned int line_number)
+{
+	int i = 0;
+
+	if (tokens == NULL)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if (tokens[i] == '-')
+		i++;
+	for (; tokens[i] != '\0'; i++)
+	{
+		if (tokens[i] < '0' || tokens[i] > '9')
+		{
+			fprintf(stderr, "L%u: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+	}
+
+	global_number = atoi(tokens);
+	return (1);
+}
+/**
  * check_digit - checks if data is an integer
  * @tokens: a token
  * @line_number: the number of lines

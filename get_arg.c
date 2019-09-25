@@ -24,9 +24,11 @@ int get_arg(char *argv[])
 	while (getline(&line, &size, fp) != -1)
 	{
 		count++;
-		get_buffer(line, buffer);
+		get_buffer(line, buffer); /* to tokenize the line*/
 		if (buffer != NULL)
 		{
+			if (buffer[0] != '\0' && strcmp("push", buffer[0]) == 0)
+				check_digit_push(buffer[1], count);
 			check_digit(buffer[1], count);
 			exe(buffer[0], &head, count);
 		}
@@ -35,10 +37,9 @@ int get_arg(char *argv[])
 			count++;
 		}
 	}
-	if (line)
-		free(line);
-	fclose(fp);
 	free_stack_t(head);
+	free(line);
+	fclose(fp);
 	exit(EXIT_SUCCESS);
 }
 /**
