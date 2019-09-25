@@ -81,21 +81,7 @@ int check_digit_push(char *tokens, unsigned int line_number)
 
 int check_digit(char *tokens, unsigned int line_number)
 {
-	int i = 0;
-
-	if (tokens == NULL)
-		return (0);
-	if (tokens[i] == '-')
-		i++;
-	for (; tokens[i] != '\0'; i++)
-	{
-		if (tokens[i] < '0' || tokens[i] > '9')
-		{
-			fprintf(stderr, "L%u: usage: push integer\n", line_number);
-			exit(EXIT_FAILURE);
-		}
-	}
-
-	global_number = atoi(tokens);
-	return (1);
+	(void)line_number;
+	(void)tokens;
+	return (0);
 }

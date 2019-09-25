@@ -29,7 +29,8 @@ int get_arg(char *argv[])
 		{
 			if (buffer[0] != '\0' && strcmp("push", buffer[0]) == 0)
 				check_digit_push(buffer[1], count);
-			check_digit(buffer[1], count);
+			else
+				check_digit(buffer[1], count);
 			exe(buffer[0], &head, count);
 		}
 		else
