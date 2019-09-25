@@ -15,9 +15,11 @@ void push(stack_t **head, unsigned int line_number)
 	{
 		free(new_node);
 		fprintf(stderr, "Error: malloc failed\n");
+		free(global.line);
+		fclose(global.fp);
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = global_number;
+	new_node->n = global.global_number;
 	if (*head != NULL)
 		(*head)->prev = new_node;
 	new_node->prev = NULL;
@@ -56,6 +58,8 @@ int check_digit_push(char *tokens, unsigned int line_number)
 	if (tokens == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		free(global.line);
+		fclose(global.fp);
 		exit(EXIT_FAILURE);
 	}
 	if (tokens[i] == '-')
@@ -65,11 +69,13 @@ int check_digit_push(char *tokens, unsigned int line_number)
 		if (tokens[i] < '0' || tokens[i] > '9')
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", line_number);
+			free(global.line);
+			fclose(global.fp);
 			exit(EXIT_FAILURE);
 		}
 	}
 
-	global_number = atoi(tokens);
+	global.global_number = atoi(tokens);
 	return (1);
 }
 /**

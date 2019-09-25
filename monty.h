@@ -36,7 +36,23 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern int global_number;
+/**
+ * struct stack_a - struct needed
+ * @line: line
+ * @global_number: number
+ * @fp: file descriptor
+ *
+ * Description: struct to free
+ * for stack, queues, LIFO, FIFO Holberton project
+ */
+typedef struct stack_a
+{
+	char *line;
+	int global_number;
+	FILE *fp;
+} global_stack;
+
+extern global_stack global;
 
 int main(int argc, char *argv[]);
 int get_arg(char *argv[]);
@@ -52,5 +68,4 @@ void pop(stack_t **head, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
-
 #endif /* _MONTY_H_ */

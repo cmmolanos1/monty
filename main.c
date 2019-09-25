@@ -1,5 +1,5 @@
 #include "monty.h"
-int global_number = 0;
+global_stack global = {NULL, 0, NULL};
 
 /**
  * main - main function.

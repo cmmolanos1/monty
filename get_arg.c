@@ -8,13 +8,14 @@
 
 int get_arg(char *argv[])
 {
-	FILE *fp;
+	FILE *fp = NULL;
 	char *line = NULL, *buffer[512];
 	size_t size = 0;
 	stack_t *head = NULL;
-	unsigned int count;
+	unsigned int count = 0;
 
 	fp = fopen(argv[1], "r");
+	global.fp = fp;
 	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
@@ -23,6 +24,7 @@ int get_arg(char *argv[])
 	}
 	while (getline(&line, &size, fp) != -1)
 	{
+		global.line = line;
 		count++;
 		get_buffer(line, buffer); /* to tokenize the line*/
 		if (buffer != NULL)
@@ -39,7 +41,7 @@ int get_arg(char *argv[])
 		}
 	}
 	free_stack_t(head);
-	free(line);
+	free(global.line);
 	fclose(fp);
 	exit(EXIT_SUCCESS);
 }
