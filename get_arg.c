@@ -14,7 +14,7 @@ int get_arg(char *argv[])
 	stack_t *head = NULL;
 	unsigned int count;
 
-	fp = fopen(argv[1], "r+");
+	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
@@ -27,7 +27,7 @@ int get_arg(char *argv[])
 		get_buffer(line, buffer);
 		if (buffer != NULL)
 		{
-			check_digit(buffer[1]);
+			check_digit(buffer[1], count);
 			exe(buffer[0], &head, count);
 		}
 		else
@@ -35,8 +35,9 @@ int get_arg(char *argv[])
 			count++;
 		}
 	}
+	if (line)
+		free(line);
 	fclose(fp);
-	free(line);
 	free_stack_t(head);
 	exit(EXIT_SUCCESS);
 }
@@ -61,14 +62,14 @@ int exe(char *op, stack_t **stack, unsigned int line_number)
 	{NULL, NULL}
 };
 	if (op == NULL)
+	{
+		free(op);
 		return (0);
-
+	}
 	for (i = 0; op_codes[i].opcode != NULL; i++)
 	{
 		if (strcmp(op_codes[i].opcode, op) == 0)
 		{
-			if (strcmp(op_codes[i].opcode, op_codes[0].opcode) == 0)
-				check_digit(op);
 			op_codes[i].f(stack, line_number);
 			return (0);
 		}

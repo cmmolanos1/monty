@@ -43,7 +43,7 @@ int get_arg(char *argv[]);
 int exe(char *op, stack_t **stack, unsigned int line_number);
 void push(stack_t **head, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-int check_digit(char *tokens);
+int check_digit(char *tokens, unsigned int line_number);
 void get_buffer(char *string, char **my_tokens);
 void free_stack_t(stack_t *head);
 void pint(stack_t **head, unsigned int line_number);
