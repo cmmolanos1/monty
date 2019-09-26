@@ -12,8 +12,14 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 * [main.c](main.c) - main function
 * [add.c](add.c) - adds top elements of the stack
 * [sub.c](sub.c) - substracts top elements of the stack
-* [div.c](div.c) - divides top elements of the stack
+* [f_div.c](f_div.c) - divides top elements of the stack
 * [mod.c](mod.c) - computes the rest of division of top elements of the stack
+* [get_arg.c](get_arg.c) - takes the argument and execute them
+  * `get_arg` - gets the arguments in the file
+  * `exe` - execute the commands
+  * `get_buffer` - tokenizes and contain in buffer
+  * `free_stack_t` - frees a node of type stack_t
+
 ## Project Requirements
 <h4 class="task">
     0. push, pall
