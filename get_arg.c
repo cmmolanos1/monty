@@ -68,6 +68,7 @@ int exe(char *op, stack_t **stack, unsigned int line_number)
 	{"div", f_div},
 	{"mul", mul},
 	{"mod", mod},
+	{"pchar", pchar},
 	{NULL, NULL}
 };
 	if (op == NULL)
