@@ -22,6 +22,10 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 * [monty.h](monty.h) - header file
 * [nop.c](nop.c) - it doesn´t do anything
 * [pchar.c](pchar.c) - prints the char representation of the top-stack 
+* [pint.c](pint.c) - prints the value at top
+* [pop.c](pop.c) - erases a node
+* [pstr.c](pstr.c) - print as characters the stack values
+* [swap.c](swap.c) - change info from two nodes
 
 ## Project Requirements
 <h4 class="task">
