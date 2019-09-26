@@ -11,6 +11,7 @@ void push(stack_t **head, unsigned int line_number)
 
 	(void)line_number;
 	new_node = malloc(sizeof(stack_t));
+	global.newnode = new_node;
 	if (new_node == NULL)
 	{
 		free(new_node);
@@ -60,6 +61,7 @@ int check_digit_push(char *tokens, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		free(global.line);
 		fclose(global.fp);
+		free_stack_t(global.newnode);
 		exit(EXIT_FAILURE);
 	}
 	if (tokens[i] == '-')
@@ -71,6 +73,7 @@ int check_digit_push(char *tokens, unsigned int line_number)
 			fprintf(stderr, "L%u: usage: push integer\n", line_number);
 			free(global.line);
 			fclose(global.fp);
+			free_stack_t(global.head);
 			exit(EXIT_FAILURE);
 		}
 	}

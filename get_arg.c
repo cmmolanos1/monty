@@ -16,6 +16,7 @@ int get_arg(char *argv[])
 
 	fp = fopen(argv[1], "r");
 	global.fp = fp;
+	global.head = head;
 	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);

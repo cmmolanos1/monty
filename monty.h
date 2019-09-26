@@ -41,6 +41,8 @@ typedef struct instruction_s
  * @line: line
  * @global_number: number
  * @fp: file descriptor
+ * @head: pointer to structure initial
+ * @newnode: pointer to structure end
  *
  * Description: struct to free
  * for stack, queues, LIFO, FIFO Holberton project
@@ -50,6 +52,8 @@ typedef struct stack_a
 	char *line;
 	int global_number;
 	FILE *fp;
+	stack_t *head;
+	stack_t *newnode;
 } global_stack;
 
 extern global_stack global;
