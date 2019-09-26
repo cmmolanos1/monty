@@ -73,7 +73,7 @@ int check_digit_push(char *tokens, unsigned int line_number)
 			fprintf(stderr, "L%u: usage: push integer\n", line_number);
 			free(global.line);
 			fclose(global.fp);
-			free_stack_t(global.head);
+			free_stack_t(global.newnode);
 			exit(EXIT_FAILURE);
 		}
 	}
