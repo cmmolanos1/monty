@@ -9,7 +9,7 @@
 int get_arg(char *argv[])
 {
 	FILE *fp = NULL;
-	char *line = NULL, *buffer[512];
+	char *line = NULL, *buffer[4096];
 	size_t size = 0;
 	stack_t *head = NULL;
 	unsigned int count = 0;
