@@ -19,6 +19,9 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
   * `exe` - execute the commands
   * `get_buffer` - tokenizes and contain in buffer
   * `free_stack_t` - frees a node of type stack_t
+* [monty.h](monty.h) - header file
+* [nop.c](nop.c) - it doesn´t do anything
+* [pchar.c](pchar.c) - prints the char representation of the top-stack 
 
 ## Project Requirements
 <h4 class="task">
@@ -803,5 +806,5 @@ Compile with:
 <pre><code>gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 </code></pre>
 ## Authors
-Carlos Molano | [GitHub](https://github.com/cmmolanos1) | [Twitter](@klichmola)
+Carlos Molano | [GitHub](https://github.com/cmmolanos1) | [Twitter](https://twitter.com/klichmola)
 Juan Carlos Cortés | [GitHub](https://github.com/jucortesa) | [Twitter](https://twitter.com/jucortesa)
