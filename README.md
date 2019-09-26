@@ -11,6 +11,9 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 * [AUTHORS](AUTHORS) - List of contributors to this repository
 * [main.c](main.c) - main function
 * [add.c](add.c) - adds top elements of the stack
+* [sub.c](sub.c) - substracts top elements of the stack
+* [div.c](div.c) - divides top elements of the stack
+* [mod.c](mod.c) - computes the rest of division of top elements of the stack
 ## Project Requirements
 <h4 class="task">
     0. push, pall
