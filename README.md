@@ -26,7 +26,8 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 * [pop.c](pop.c) - erases a node
 * [pstr.c](pstr.c) - print as characters the stack values
 * [swap.c](swap.c) - change info from two nodes
-
+* [rotl.c](rotl.c) - rotates the stack to the top 
+* [rotr.c](rot.c) - puts the bottom node to the top of stack
 ## Project Requirements
 <h4 class="task">
     0. push, pall
