@@ -19,7 +19,7 @@ int get_arg(char *argv[])
 	global.head = head;
 	if (fp == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		fclose(fp);
 		exit(EXIT_FAILURE);
 	}
