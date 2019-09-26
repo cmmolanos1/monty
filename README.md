@@ -8,31 +8,36 @@
 ## Description
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 ## File Structure
-* [AUTHORS](AUTHORS) - List of contributors to this repository
+* [bf](bf) - Brainf*ck exercise
+  *[1000-holberton.bf](1000-holberton.bf) - prints Holberton
+  *[1001-add.bf](1001-add.bf) - adds two digits
+  *[1002-mul.bf](1002-mul.bf) - multiplies two digits, result one digit long
+  *[1003-mul.bf](1003-mul.bf) - multiplies two digits
 * [main.c](main.c) - main function
 * [add.c](add.c) - adds top elements of the stack
-* [sub.c](sub.c) - substracts top elements of the stack
 * [f_div.c](f_div.c) - divides top elements of the stack
-* [mod.c](mod.c) - computes the rest of division of top elements of the stack
 * [get_arg.c](get_arg.c) - takes the argument and execute them
   * `get_arg` - gets the arguments in the file
   * `exe` - execute the commands
   * `get_buffer` - tokenizes and contain in buffer
   * `free_stack_t` - frees a node of type stack_t
+* [mod.c](mod.c) - computes the rest of division of top elements of the stack
 * [monty.h](monty.h) - header file
+* [mul.c](mul.c) - multiplies top elements of the stack
 * [nop.c](nop.c) - it doesn´t do anything
 * [pchar.c](pchar.c) - prints the char representation of the top-stack 
 * [pint.c](pint.c) - prints the value at top
 * [pop.c](pop.c) - erases a node
 * [pstr.c](pstr.c) - print as characters the stack values
-* [swap.c](swap.c) - change info from two nodes
-* [rotl.c](rotl.c) - rotates the stack to the top 
-* [rotr.c](rot.c) - puts the bottom node to the top of stack
 * [push-pall.c](push-pall.c) - look for integer adds and prints from stack
   * `push` - puts a number into the top node
   * `pall` - prints all elements of the stack
   * `check_digit_push` - checks if data is an integer
   * `check_digit` - returns 0
+* [rotl.c](rotl.c) - rotates the stack to the top 
+* [rotr.c](rot.c) - puts the bottom node to the top of stack
+* [sub.c](sub.c) - substracts top elements of the stack
+* [swap.c](swap.c) - change info from two nodes
 ## Project Requirements
 <h4 class="task">
     0. push, pall
