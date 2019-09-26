@@ -81,6 +81,9 @@ int exe(char *op, stack_t **stack, unsigned int line_number)
 	}
 
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, op);
+	free(global.line);
+	fclose(global.fp);
+	free_stack_t(global.newnode);
 	exit(EXIT_FAILURE);
 }
 /**
