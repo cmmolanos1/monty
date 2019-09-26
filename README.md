@@ -4,8 +4,6 @@
 * [File Structure](#file-structure)
 * [Project Requirements](#project-requirements)
 * [Compilation](#compilation)
-* [Example of Use](#example-of-use)
-* [Bugs](#bugs)
 * [Authors](#authors)
 ## Description
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
@@ -791,6 +789,8 @@ julien@ubuntu:~/brainfuck$
 </code></pre>
 ## Compilation
 Compile with:
-<pre><code>
-gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+<pre><code>gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 </code></pre>
+## Authors
+Carlos Molano | [GitHub](https://github.com/cmmolanos1) | [Twitter](@klichmola)
+Juan Carlos Cortés | [GitHub](https://github.com/jucortesa) | [Twitter](https://twitter.com/jucortesa)
