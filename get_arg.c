@@ -107,7 +107,7 @@ void get_buffer(char *string, char **my_tokens)
 	if (my_tokens == NULL)
 		exit(EXIT_FAILURE);
 	token = strtok(string, separators);
-	while (token != NULL)
+	while (token != NULL && token[0] != '#')
 	{
 		my_tokens[i] = token;
 		i++;
