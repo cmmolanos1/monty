@@ -20,7 +20,7 @@ int get_arg(char *argv[])
 	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		fclose(fp);
+/*		fclose(fp);*/
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&line, &size, fp) != -1)
