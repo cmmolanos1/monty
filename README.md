@@ -28,6 +28,11 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 * [swap.c](swap.c) - change info from two nodes
 * [rotl.c](rotl.c) - rotates the stack to the top 
 * [rotr.c](rot.c) - puts the bottom node to the top of stack
+* [push-pall.c](push-pall.c) - look for integer adds and prints from stack
+  * `push` - puts a number into the top node
+  * `pall` - prints all elements of the stack
+  * `check_digit_push` - checks if data is an integer
+  * `check_digit` - returns 0
 ## Project Requirements
 <h4 class="task">
     0. push, pall
