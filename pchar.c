@@ -21,5 +21,5 @@ void pchar(stack_t **stack, unsigned int line_number)
 		free_stack_t(global.newnode);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", (*stack)->n));
+	printf("%c\n", (*stack)->n);
 }
