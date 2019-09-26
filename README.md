@@ -3,7 +3,7 @@
 * [Description](#description)
 * [File Structure](#file-structure)
 * [Project Requirements](#project-requirements)
-* [Compilation](#installation)
+* [Compilation](#compilation)
 * [Example of Use](#example-of-use)
 * [Bugs](#bugs)
 * [Authors](#authors)
@@ -788,4 +788,9 @@ julien@ubuntu:~/brainfuck$
 77
 49
 julien@ubuntu:~/brainfuck$ 
+</code></pre>
+## Compilation
+Compile with:
+<pre><code>
+gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 </code></pre>
